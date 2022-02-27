@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <title>Lacroix Antiquité - Accueil</title>
 </head>
 <body>
@@ -16,9 +16,9 @@
 
         <nav>
             <ul>
-                <li class="active"><a href="index.html" >Accueil</a></li>
+                <li><a href="index.html" >Accueil</a></li>
                 <li><a href="about.html">A propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -31,9 +31,9 @@
         
             <div class="contenu-menu">
                 <ul>
-                    <li class="active"><a href="index.html" >Accueil</a></li>
+                    <li><a href="index.html" >Accueil</a></li>
                     <li><a href="about.html">A propos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <script>
@@ -47,19 +47,33 @@
         </div>
     </header>
     <main>
-        <div class="hero">
-            <img src="media/img/hero.jpg" alt="">
-            <div class="cta">
-                <div class="hero-text">
-                    <h1>Lacroix Antiquité</h1>
-                    <h2>Un antiquaire à votre service depuis 40 ans !</h2>
-                    <h3>Situés à Morlaix, en Bretagne, amoureux des antiquités je reste à votre service sur toute la France, pour  mettre à disposition tous vos coups de cœur, de même, je rachète tous vos meubles, sculptures, tableaux…</h3>
-                </div>
-                <a href="contact.html">
-                    Me contacter
-                </a>
-            </div>
+        <div class="title">
+            <h1>Me contacter - Lacroix Antiquité</h1>
         </div>
+
+        <form action="traitements/mail.php" method="post">
+            <div class="champ">
+                <input type="text" name="nom" id="nom" placeholder="Votre nom...">
+            </div>
+            <div class="champ">
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom...">
+            </div>
+            <div class="champ">
+                <input type="email" name="mail" id="mail" placeholder="Votre mail...">
+            </div>
+            <div class="champ">
+                <input type="text" name="sujet" id="sujet" placeholder="Le sujet de votre message...">
+            </div>
+            <div class="champ">
+                <textarea name="message" id="message" placeholder="Votre message..."></textarea>
+            </div>
+            <div class="champ">
+                <input type="hidden" name="raison">
+            </div>
+            <div class="champ">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
     </main>
 
     <footer>

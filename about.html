@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <title>Lacroix Antiquité - A propos</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="media/img/logoWhite.png" alt="Logo Lacroix Antiquité"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" >Accueil</a></li>
+                <li class="active"><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu">
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+            <div class="contenu-menu">
+                <ul>
+                    <li><a href="about.html">A propos</a></li>
+                    <li class="active"><a href="index.html" >Accueil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <script>
+                let menutoggle = document.querySelector('.toggle');
+                let menu = document.querySelector('.menu');
+                menutoggle.onclick = function () {
+                    menu.classList.toggle('open');
+                    menutoggle.classList.toggle('active');
+                };
+            </script>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Lacroix Antiquité - Qui suis-je ? </h1>
+        </div>
+        <section> 
+            <div class="img">
+                <img src="media/img/crbst_6.jpg" alt="Photo">
+            </div>
+            <div class="text">
+                <p>Lacroix Antiquité vous souhaite la bienvenue,</p>
+
+                <p>Un antiquaire à votre service depuis 40 ans</p>
+
+                <p>Brocante, vente d'antiquités, objets et meubles anciens, Peintures, sculptures, luminaires, céramique, miroirs…
+                Ce site s'adresse à tous les brocanteurs, collectionneurs ou encore adeptes de vide-greniers, vous trouverez à travers le catalogue, un grand choix d’antiquités.
+                Antiquaire, depuis 1981, Lacroix Antiquité est à votre service en vous accueillant sur rendez-vous pour la vente de sculptures, tableaux, d’objets et de meubles du 17ème siècles au 1960 vendus dans l’état ou restaurés.</p>
+
+                <p>Situés à Morlaix, en Bretagne, amoureux des antiquités je reste à votre service sur toute la France, pour  mettre à disposition tous vos coups de cœur, de même, je rachète tous vos meubles, sculptures, tableaux…</p>
+
+                <p>Possibilité de paiement par chèque, virement bancaire et espèce. Consultez mes conditions générales de ventes</p>
+                <div class="subtitle">
+                    <h2>Demande d’informations</h2>
+                </div>
+                <p>Il est possible de me joindre par téléphone au 06 07 80 48 98 tous les jours de 9H00 à 20H00 et par mail, par le biais de la page contact.
+                Afin d’avoir un rendez-vous ou pour tous renseignements complémentaires sur les articles mis en vente ou sur les articles recherchés.</p> 
+
+                <p>N'hésitez pas à consulter notre second site internet : www.lacroixantiquite.com</p>
+
+                <p>Je vous souhaite une bonne visite et n’hésitez pas à me contacter… </p>
+
+
+
+                <p>Lacroix Antiquité -BP 37436 - 29674 Morlaix Cedex - Port : 06 07 80 48 98 - Tél : 02 98 62 08 69</p>
+                <p>antiquite dominique la croix 29600 morlaix - Rcs : 322 453 978 - Tel : 06.07.80.48.98</p>
+            </div>
+           
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="left">
+            <a href="index.html">Accueil</a> ▬ <a href="contact.html">Contact</a>
+        </div>
+        <div class="middle">
+            <div class="line">&copy Lacroix Antiquité</div>
+            <div class="line">Développé par <a href="">Alexandre Harel</a></div>
+            
+        </div>
+        <div class="right">
+            <a href="">Mentions Légales</a> ▬ <a href="">CGU</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

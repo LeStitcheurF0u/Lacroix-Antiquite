@@ -1,9 +1,12 @@
 :root{
 
     /****Couleurs****/
-    --primary: #EF233C;
-    --secondary: #8D99AE;
-    --bg-body: #EDF2F4;
+    --primary: #29282d;
+    --secondary: #7D6460;
+    --tertiaire: #6869ac;
+    --bg-body: #F1EEE9;
     --font-color: #2B2D42;
+    --fcw: #fefefe;
 
+    
 }

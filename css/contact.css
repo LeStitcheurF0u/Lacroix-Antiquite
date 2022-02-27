@@ -1,0 +1,67 @@
+@import url(style.css);
+
+.title{
+    margin: 40px 0;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    background: var(--secondary);
+    border-radius: 0 10px 10px 0;
+}
+
+.title h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Roboto';
+    color: var(--fcw);
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.champ{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input,
+textarea{
+    width: 15rem;
+    height: 50px;
+    font-size: 1.2em;
+    font-family: 'Roboto';
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    color: var(--tertiaire);
+    padding: 15px;
+    outline: 0;
+}
+
+button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary);
+    border: none;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--fcw);
+    padding: 15px 28px;
+    cursor: pointer;
+
+}

@@ -4,260 +4,328 @@
 @import url(animations.css);
 
 
+
 body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     min-height: 100vh;
     background: var(--bg-body);
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
-
-
-.navigation {
-    position: fixed;
-    top: 0;
+header {
+    position: relative;
     width: 100%;
-    height: 70px;
-    background: var(--font-color);
+    height: 10vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    background: var(--primary);
+    z-index: 3;
 }
 
-.navigation ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+.logo{
+    margin-left: 50px;
 }
 
-.navigation ul li {
-    margin: 20px;
-}
-
-.navigation ul li.desk{
-    display: none
-}
-
-.navigation ul li a{
-    display: flex;
-    text-decoration: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.navigation ul li a .icon{
-    width: 1.2em;
-    filter: invert(9);
-}
-
-.navigation ul li a .text{
-    font-size: 0.9em;
-    color: var(--bg-body);
-    font-family: 'Poppins';
-    transition: .5s;
-}
-
-.navigation ul li:hover a .text {
-    color: var(--primary);
-}
-
-
-.indicator{
+.menu{
     display: none;
 }
 
-
-#acceuil,
-#about,
-#contact {
-    width: 100%;
-    height: 400px;
+ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
+ul li {
+    padding: 15px;
+}
+
+ul li.active a{
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+ul li:hover a{
+    background: var(--tertiaire);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    color: var(--fcw);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+/* HERO */
+
+
+
+
+.hero{
+    flex: 2;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+.hero .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-text{
+    padding: 2rem;
+    background: rgba( 41, 40, 45, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px 10px 0 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.hero-text h1 {
+    font-size: 1.5em;
+    color: var(--tertiaire);
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    /* text-shadow: var(--fcw) 1px 0 10px; */
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+} 
+
+.hero-text h2, 
+.hero-text h3 {
+    color: var(--fcw);
+    font-size: 1.3em; 
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 1;
+}
+
+
+.cta a {
+    width: auto;
+    margin-left: 15px;
+    align-self: flex-end;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Roboto';
+    background: var(--secondary);
+    padding: 1.1em 1.5em;
+    border-radius: 10px 10px 10px 0;
+    color: var(--fcw);
+    
+}
+
+
+
+
+
+/* #############################
+#                              #
+#           footer             #
+#                              #
+############################# */
+
+
 
 footer {
     width: 100%;
-    height: 100px;
-    background: var(--font-color);
+    height: 10vh;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
+    background: var(--primary);
+    color: var(--fcw);
+    font-family: 'Roboto';
+    letter-spacing: 2px;
 }
 
-footer .left ul {
+.left,
+.right {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-footer .left ul li {
-    margin: 30px;
+.left {
+    margin-left: 20px;
 }
-footer .left ul li a {
-    color: var(--bg-body);
-    font-family: 'Poppins';
-    font-size: 1em;
+
+.right{
+    margin-right: 20px;
+}
+
+.left a,
+.right a{
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 10px;
+    color: var(--fcw);
 }
 
-footer .middle .social {
-    filter: invert(9);
+.left a:hover,
+.right a:hover{
+    color: var(--tertiaire);
+}
+.middle {
+    font-size: 0.8em;
+    margin-left: 20px;
 }
 
-footer .right ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-footer .right ul li {
-    margin: 30px;
-}
-footer .right ul li a {
-    color: var(--bg-body);
-    font-family: 'Poppins';
-    font-size: 1em;
+.middle a {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--tertiaire);
 }
+
+
 
 
 @media screen and (max-width: 900px){
     
-    .navigation{
-        position: fixed;
-        top: initial;
-        bottom: -1px;
-        width: 100%;
-        height: 70px;
-        background: var(--font-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        z-index: 1;
-    }
-    
-    .navigation ul {
-      display: flex;
-      justify-content: initial;
-      align-items: initial;
-       width: 350px; 
-    }
-    
-    .navigation ul li {
-        position: relative;
+    .logo {
+        transform: scale(0.5);
         margin: 0;
-        list-style: none;
-        width: 70px;
-        height: 70px;
-        z-index: 1;
     }
 
-    .navigation ul li.desk{
+    nav{display: none;}
+
+    .menu{
+        position: absolute;
+        top: 0;
         display: block;
+        width: 100%;
+        z-index: 3;
     }
-    
-    .navigation ul li a{
+    .toggle {
         position: relative;
+        background: none;
+        width: 50px;
+        height: 50px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
+        cursor: pointer;
+        overflow: hidden;
+        transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 3;
     }
-    
-    .navigation ul li a .icon{
-        position: relative;
-        display: block;
-        line-height: 75px;
-        width: 1.5em;
-        text-align: center;
-        filter: invert(9);
-        transition: .5s; 
-    }
-    
-    
-    .navigation ul li.active a .icon{
-        transform: translateY(-35px );
-    }
-    
-    
-    
-    .navigation ul li a .text {
-        font-family: 'Poppins';
+    .toggle span {
         position: absolute;
-        color: var(--bg-body);
-        font-weight: 600;
-        font-size: 0.8em;
-        letter-spacing: 0.05em;
-        transform: translateY(20px);
-        transition: .5s;
-        opacity: 0;
+        width: 20px;
+        height: 4px;
+        background: #fefefe;
+        border-radius: 4px;
+        transition: .7s;
     }
+    .toggle span:nth-child(1) {
+        transform: translateY(-7px);
+        width: 20px;
+      }
     
-    .navigation ul li.active a .text {
-        opacity: 1;
-        transform: translateY(10px);
-    }
+      .toggle.active span:nth-child(1) {
+        transform: translateY(0) rotate(225deg);
+      }
+      .toggle span:nth-child(2) {
+        transform: translateY(7px);
+        width: 20px;
+      }
+      .toggle.active span:nth-child(2) {
+        width: 20px;
+        transform: translateY(0) rotate(135deg);
+      }
     
-    .indicator {
-        display: block;
+      .toggle.active span:nth-child(3) {
+        transform: translateX(60px);
+      }
+    
+      .menu .contenu-menu {
         position: absolute;
-        top: -50%;
-        width: 70px;
-        height: 70px;
+        top: -2000px;
+        left: 0;
         background: var(--primary);
-        border-radius: 50%;
-        border: 6px solid var(--bg-body);
-        transition: .5s;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 2;
+      }
+      .menu.open .contenu-menu {
+        top: 0;
+        transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      ul {
+          flex-flow: column;
+          justify-content: flex-start;
+      }
+      .cta {
+        flex-flow: column;
+      }
+      
+    .hero-text{
+        font-size: 0.7em;
     }
-    
-    .indicator::before{
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -22px;
-        width: 20px;
-        height: 20px;
-        border-top-right-radius: 20px;
-        box-shadow: 1px -10px 0 0 var(--bg-body);
-    }
-    .indicator::after{
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -22px;
-        width: 20px;
-        height: 20px;
-        border-top-left-radius: 20px;
-        box-shadow: -1px -10px 0 0 var(--bg-body);
-    }
-    
-    .navigation ul li:nth-child(1).active ~ .indicator{
-        transform: translateX(calc(70px * 0));
-    }
-    .navigation ul li:nth-child(2).active ~ .indicator{
-        transform: translateX(calc(70px * 1));
-    }
-    .navigation ul li:nth-child(3).active ~ .indicator{
-        transform: translateX(calc(70px * 2));
-    }
-    .navigation ul li:nth-child(4).active ~ .indicator{
-        transform: translateX(calc(70px * 3));
-    }
-    .navigation ul li:nth-child(5).active ~ .indicator{
-        transform: translateX(calc(70px * 4));
-    }
+      
+      footer {
+          height: 20vh;
+      }
+
 
 }
