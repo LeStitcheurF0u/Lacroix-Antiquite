@@ -165,7 +165,33 @@ main {
     
 }
 
+/* #############################
+#                              #
+#           main               #
+#                              #
+############################# */
 
+.title{
+    margin: 40px 0;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    background: var(--secondary);
+    border-radius: 0 10px 10px 0;
+}
+
+.title h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Roboto';
+    color: var(--fcw);
+
+}
 
 
 

@@ -31,25 +31,21 @@
         
             <div class="contenu-menu">
                 <ul>
-                    <li><a href="about.html">A propos</a></li>
-                    <li class="active"><a href="index.html" >Accueil</a></li>
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li class="active"><a href="about.html">A propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <script>
-                let menutoggle = document.querySelector('.toggle');
-                let menu = document.querySelector('.menu');
-                menutoggle.onclick = function () {
-                    menu.classList.toggle('open');
-                    menutoggle.classList.toggle('active');
-                };
-            </script>
+            
         </div>
     </header>
-    <main>
+    
         <div class="title">
             <h1>Lacroix Antiquité - Qui suis-je ? </h1>
         </div>
+        
+        <main>
+        
         <section> 
             <div class="img">
                 <img src="media/img/crbst_6.jpg" alt="Photo">
@@ -96,10 +92,10 @@
             
         </div>
         <div class="right">
-            <a href="">Mentions Légales</a> ▬ <a href="">CGU</a>
+            <a href="mentions.html">Mentions Légales</a> ▬ <a href="cgu.html">CGU</a>
         </div>
     </footer>
-
+    <script src="ressources/js/index.js"></script>
 
 </body>
 </html>
