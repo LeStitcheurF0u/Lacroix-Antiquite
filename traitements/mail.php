@@ -5,7 +5,7 @@
             if(isset($_POST['raison']) && empty($_POST['raison'])){
                 if(!preg_match('!^ *$!s', $_POST['nom']) && !preg_match('!^ *$!s', $_POST['prenom']) && !preg_match('!^ *$!s', $_POST['mail']) && !preg_match('!^ *$!s', $_POST['sujet']) && !preg_match('!^ *$!s', $_POST['message'])){
                     $mailMail = htmlspecialchars($_POST['nom']);
-                    $mailTo = "";
+                    $mailTo = "mcfly@mywebsoluce.fr";
 
                     $mailNom = htmlspecialchars($_POST['nom']);
                     $mailPrenom = htmlspecialchars($_POST['prenom']);
