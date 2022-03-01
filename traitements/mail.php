@@ -4,7 +4,7 @@
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['raison']) && empty($_POST['raison'])){
                 if(!preg_match('!^ *$!s', $_POST['nom']) && !preg_match('!^ *$!s', $_POST['prenom']) && !preg_match('!^ *$!s', $_POST['mail']) && !preg_match('!^ *$!s', $_POST['sujet']) && !preg_match('!^ *$!s', $_POST['message'])){
-                    $mailMail = htmlspecialchars($_POST['nom']);
+                    $mailMail = htmlspecialchars($_POST['mail']);
                     $mailTo = "mcfly@mywebsoluce.fr";
 
                     $mailNom = htmlspecialchars($_POST['nom']);
@@ -107,7 +107,20 @@
                                 "Content-Type: text/html; charset=UTF-8";
 
                                 mail($to, $subject, $message, $headers);
+
+                                echo '<script>
+                                alert("Merci de votre mail, j\'y répondrais dans les plus brefs délais.");        
+                                </script>';
+                                header('location: ../contact.html');
+                } else {
+                    echo '<script>
+                    alert("Une erreur s\'est produite, Veuillez essayer de nouveau.");        
+                    </script>';
+                    header('location: ../contact.html');
                 }
+            } else {
+                http_response_code(405);
+                echo 'echo Requête non autorisée !';
             }
         }
     }
